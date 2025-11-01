@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 320px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #34495e;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  outline: none;
+}
+
+#searchInput::placeholder {
+  color: #bdc3c7;
+}
+
+.tree {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.tree-node {
+  cursor: pointer;
+  padding: 8px 10px;
+  margin: 4px 0;
+  border-radius: 5px;
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.tree-node:hover {
+  background-color: #34495e;
+}
+
+.tree-node.active {
+  background-color: #3498db;
+  font-weight: bold;
+}
+
+.tree-node .icon {
+  margin-right: 6px;
+  color: #1abc9c;
+}
+
+.tree-node .title {
+  display: inline;
+}
+
+.tree-node.children::before {
+  content: "▶";
+  font-size: 0.8em;
+  margin-right: 4px;
+}
+
+.tree-node.expanded::before {
+  content: "▼";
+}
+
+.tree-node.leaf::before {
+  content: "📄";
+  visibility: visible;
+}
+
+.tree-node.leaf .icon {
+  visibility: hidden;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+#breadcrumb {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#notesPanel {
+  background-color: #fffacd;
+  border-left: 4px solid #f1c40f;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+#notesPanel.hidden {
+  display: none;
+}
+
+#contentArea {
+  font-size: 1em;
+  color: #2c3e50;
+}
+
+#contentArea h3 {
+  color: #2980b9;
+  margin: 1em 0 0.5em;
+}
+
+#contentArea ul {
+  margin: 10px 0 10px 20px;
+}
+
+#contentArea img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    max-height: 300px;
+  }
+}
