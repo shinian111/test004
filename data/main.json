@@ -1,0 +1,34 @@
+[
+  {
+    "title": "⭐铝丝/油壶工装-专项",
+    "type": "folder",
+    "source": "data/fault_type_1.json"
+  },
+  {
+    "title": "⭐工装/高压阀/O型圈",
+    "type": "folder",
+    "source": "data/1/1-1/sub_fault.json"
+  },
+  {
+    "title": "原材料",
+    "type": "folder",
+    "children": [
+      {
+        "title": "PSMC1_2C_IPB",
+        "type": "page",
+        "content": "这是关于原材料PSMC1_2C_IPB的处理说明。",
+        "measures": [
+          "检查材料批次",
+          "更换原材料",
+          "<image src='images/example1.jpg' alt='原材料图' />"
+        ],
+        "notes": "注意：更换时需记录批次号。"
+      }
+    ]
+  },
+  {
+    "title": "工装/设备",
+    "type": "folder",
+    "source": "data/fault_type_2.json"
+  }
+]
