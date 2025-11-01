@@ -1,0 +1,39 @@
+[
+  {
+    "title": "dPRes3OS2_2B_IPB 超上限",
+    "type": "page",
+    "content": "该信号超上限，可能与油路或传感器有关。",
+    "measures": [
+      "检查油壶工装密封圈",
+      "确认铝丝连接正常",
+      "<image src='images/example2.png' alt='接线图' />"
+    ],
+    "notes": "⭐近期重点关注"
+  },
+  {
+    "title": "gPRes3OS3_2B_IPB 超上限⭐",
+    "type": "folder",
+    "children": [
+      {
+        "title": "初步判断为铝丝问题",
+        "type": "page",
+        "content": "若此项超限，优先检查铝丝连接。",
+        "measures": [
+          "重新压接铝丝",
+          "使用万用表检测导通性",
+          "<image src='images/wire_check.jpg' alt='铝丝检测' />"
+        ]
+      },
+      {
+        "title": "排除铝丝后检查工装",
+        "type": "page",
+        "content": "若铝丝正常，则检查工装O型圈。",
+        "measures": [
+          "更换O型圈",
+          "进行盲板泄漏测试"
+        ]
+      }
+    ],
+    "notes": "⭐与铝丝强相关"
+  }
+]
