@@ -1,0 +1,30 @@
+[
+  {
+    "title": "gPRes3PRV2_2B_IPB 超下限",
+    "type": "page",
+    "content": "高压阀压力偏低。",
+    "measures": [
+      "检查高压阀是否卡滞",
+      "清洗阀芯",
+      "<image src='images/valve_clean.jpg' alt='阀芯清洗' />"
+    ],
+    "notes": "如盲板测试无泄漏，则非密封问题。"
+  },
+  {
+    "title": "FailureMemory",
+    "type": "folder",
+    "children": [
+      {
+        "title": "代码：0002/0020/4002",
+        "type": "page",
+        "content": "ECU通信异常。",
+        "measures": [
+          "检查ECU供电",
+          "重启设备",
+          "查看FailureMemory Excel表"
+        ],
+        "notes": "先查Excel确认是否线圈电阻问题"
+      }
+    ]
+  }
+]
